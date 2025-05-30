@@ -89,3 +89,34 @@ Você deverá criar diversas consultas, com o objetivo de retornar os dados a se
 ## 12 - Buscar o nome do filme e os atores, trazendo o PrimeiroNome, UltimoNome e seu Papel
 
 ![Exercicio 12](Imagens/12.png)
+
+## Abaixo as querys para executar o que foi pedido acima:
+
+1- SELECT Nome, Ano from Filmes;
+
+2- SELECT Nome, Ano, Duracao from Filmes ORDER BY Ano;
+
+3- select Nome, Ano, Duracao from filmes where Nome = 'De Volta para o Futuro'
+
+4- select Nome, Ano, Duracao from filmes where Ano = 1997
+
+5- select Nome, Ano, Duracao from filmes where Ano > 2000
+
+6- select Nome, Ano, Duracao from filmes where duracao > 100 and duracao < 150
+
+7- SELECT Ano, COUNT(*) AS Quantidade, MAX(Duracao) AS Duracao FROM Filmes GROUP BY Ano ORDER BY Duracao DESC;
+
+8- select PrimeiroNome, UltimoNome from Atores where Genero = 'M'
+
+9- select PrimeiroNome, UltimoNome from Atores where Genero = 'F' ORDER by PrimeiroNome ASC
+
+10- select f.Nome, g.Genero from Filmes F, Generos g, FilmesGenero fg where f.Id = fg.Id and g.Id = fg.IdGenero
+
+11- select f.Nome, g.Genero from Filmes F, Generos g, FilmesGenero fg where f.Id = fg.Id and g.Id = fg.IdGenero and g.Genero = 'Mistério'
+
+12- select f.Nome, a.PrimeiroNome, a.UltimoNome, ef.Papel from Filmes f, Atores a, ElencoFilme ef where ef.IdAtor = a.Id and ef.IdFilme = f.Id
+
+
+
+
+
